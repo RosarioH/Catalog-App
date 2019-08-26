@@ -23,15 +23,14 @@ class Categories(Base):
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
 
-
     @property
     def serialize(self):
         """Return object data in easily serializeable format"""
         return {
             'name': self.name,
             'id': self.id,
-            
         }
+
 
 class CatalogItem(Base):
     __tablename__ = 'catalog_item'
@@ -46,8 +45,6 @@ class CatalogItem(Base):
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
 
-
-
     @property
     def serialize(self):
         """Return object data in easily serializeable format"""
@@ -58,7 +55,8 @@ class CatalogItem(Base):
             'price': self.price
         }
 
+
 engine = create_engine('sqlite:///catalogwithusers.db',
-connect_args={'check_same_thread': False})
+                       connect_args={'check_same_thread': False})
 
 Base.metadata.create_all(engine)

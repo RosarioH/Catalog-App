@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Udacity Item Catalog
 
 A simple web application that provides a list of items within a variety of categories and integrate third party user registration and authentication. Authenticated users have the ability to post, edit, and delete their own items.
@@ -82,4 +81,3 @@ Then move inside the catalog folder:
 Then run the application:
 
 `python catalog_app.py`
->>>>>>> aadbc4983754a0c9d009dd69749f21511ac4d507
